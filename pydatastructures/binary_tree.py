@@ -1,30 +1,44 @@
-class binary_tree:
-    def __init__(self):
-        print('this is a binary tree')
-        
-    class Node:
-        def __init__(self, value):
-            self.value = value
+class Node:
+        def __init__(self, data):
+            self.data = data
             self.left = None
             self.right = None
-        def print_tree(self):
-            print(self.value)
-        def insert(self, value)
-            if self.value:
-                if value < self.value:
+        def printTree(self):
+            if self.left:
+                self.left.printTree()
+            print(self.data),
+            if self.right:
+                self.right.printTree()
+        def insert(self, data):
+
+            if self.data:
+                if data < self.data:
                     if self.left is None:
-                        self.left = Node(value)
+                        self.left = Node(data)
                     else:
-                        self.left.insert(value)
-                elif value >self.value:
+                        self.left.insert(data)
+                elif data > self.data:
                     if self.right is None:
-                        self.right =Node(value)
+                        self.right = Node(data)
                     else:
-                        self.right.insert(value)
+                        self.right.insert(data)
             else:
-                self.value = value
+                self.data = data
+        def findval(self, lkpval):
+            if lkpval < self.data:
+                if self.left is None:
+                    return str(lkpval)+" Not Found"
+                return self.left.findval(lkpval)
+            elif lkpval > self.data:
+                if self.right is None:
+                    return str(lkpval)+" Not Found"
+                return self.right.findval(lkpval)
+            else:
+                print(str(self.data) + ' is found')
+   
+        
+    
                      
                         
             
-if __name__ == '__main__':
-    binary_tree()
+
