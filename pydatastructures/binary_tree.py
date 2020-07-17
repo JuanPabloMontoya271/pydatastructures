@@ -35,6 +35,16 @@ class Node:
                 return self.right.findval(lkpval)
             else:
                 print(str(self.data) + ' is found')
+
+class binary_tree:
+    def __init__(self, values):
+        self.tree = None
+        if values:
+            head = Node(values[0])
+            for value in values:
+                head.insert(value)
+        self.tree = head
+        print(self.tree)
    
         
     
