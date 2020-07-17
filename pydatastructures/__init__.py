@@ -1,1 +1,1 @@
-from python-datastructures.binary_tree import *
+from pydatastructures.binary_tree import *
