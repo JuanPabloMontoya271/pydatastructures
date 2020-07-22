@@ -1,13 +1,11 @@
 from distutils.core import setup
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+
 setup(
   name = 'pydatastructures',         
   packages = ['pydatastructures'],   # Chose the same as "name"
   version = '0.2.2',      
   license='MIT',       
   description = 'This is a python library to implement data structures and algorithms',
-  long_description=long_description,
   author = 'Juan Pablo Montoya',                   
   author_email = 'A01251887@itesm.mx',      
   url = 'https://github.com/JuanPabloMontoya271/pydatastructures.git',   
