@@ -3,15 +3,15 @@ class Node:
             self.data = data
             self.left = None
             self.right = None
-        def printTree(self, layer = 0):
+        def printTree(self, layer = 0, orientation ="root"):
             u = layer+1
             print(f"{layer}:  {self.data}")
             if self.left:
-                self.left.printTree(u)
+                self.left.printTree(u, orientation="left")
             
               
             if self.right:
-                self.right.printTree(u)
+                self.right.printTree(u,orientation="right")
         def insert(self, data):
 
             if self.data:
@@ -77,6 +77,7 @@ class Node:
                 print(str(self.data) + ' is found')
 
 class binary_tree:
+    
     def __init__(self, values):
         self.tree = None
         if values:
@@ -85,6 +86,9 @@ class binary_tree:
                 head.insert(value)
         self.tree = head
         print(self.tree)
+    def printTree():
+        self.tree.printTree()
+        
    
         
     
