@@ -5,9 +5,10 @@ class Node:
             self.right = None
         def printTree(self, layer = 0):
             u = layer+1
+            print(f"{layer}:  {self.data}")
             if self.left:
                 self.left.printTree(u)
-            print(f"{layer}:  {self.data}")
+            
               
             if self.right:
                 self.right.printTree(u)
