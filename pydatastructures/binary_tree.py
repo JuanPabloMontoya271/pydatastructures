@@ -24,6 +24,43 @@ class Node:
                         self.right.insert(data)
             else:
                 self.data = data
+        def remove(self, value, parentNode = None):
+            currentNode = self
+            while currentNode is not None:
+                if value<currentNode.data:
+                    parentNode = currentNode
+                    currentNode =currentNode.left
+                elif value >currentNode.data:
+                    parentNode =currentNode
+                    currentNode =currentNode.right
+                else:
+                    if currentNode.left is not None and currentNode.right is not None:
+                        currentNode.data = currentNode.right.getMinValue()
+                        currentNode.right.remove(currentNode.data, currentNode)
+                    elif parentNode is None:
+                        if currentNode.left is not None:
+                            currentNode.data =currentNode.left.data
+                            currentNode.right = currentNode.left.right
+                            currentNode.left = currentNode.left.left
+                        elif currentNode.right is not None:
+                            currentNode.data = currentNode.right.data
+                            currentNode.left = currentNode.right.left
+                            currentNode.right = currentNode.right.right
+                        else:
+                            pass
+
+                    elif parentNode.left ==currentNode:
+                        parentNode.left = currentNode.left if currentNode.left is not None else currentNode.right
+                    elif parentNode.right == currentNode:
+                        parentNode.right = currentNode.left if currentNode.left is not None else currentNode.right
+                    break
+            return self
+        def getMinValue(self):
+            currentNode = self
+            while currentNode.left is not None:
+                currentNode = currentNode.left
+            return currentNode.data
+                
         def findval(self, lkpval):
             if lkpval < self.data:
                 if self.left is None:
