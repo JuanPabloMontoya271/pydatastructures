@@ -86,7 +86,7 @@ class binary_tree:
                 head.insert(value)
         self.tree = head
         print(self.tree)
-    def printTree():
+    def printTree(self):
         self.tree.printTree()
         
    
