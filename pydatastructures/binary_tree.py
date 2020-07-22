@@ -4,7 +4,7 @@ class Node:
             self.left = None
             self.right = None
         def printTree(self, layer = 0):
-            u = layer+=1
+            u = layer+1
             if self.left:
                 self.left.printTree(u)
             print(f"{layer}:  {self.data}")
