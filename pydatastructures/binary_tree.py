@@ -3,12 +3,14 @@ class Node:
             self.data = data
             self.left = None
             self.right = None
-        def printTree(self):
+        def printTree(self, layer = 0):
+            u = layer+=1
             if self.left:
-                self.left.printTree()
-            print(self.data),
+                self.left.printTree(u)
+            print(f"{layer}:  {self.data}")
+              
             if self.right:
-                self.right.printTree()
+                self.right.printTree(u)
         def insert(self, data):
 
             if self.data:
