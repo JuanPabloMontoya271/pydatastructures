@@ -5,7 +5,7 @@ class Node:
             self.right = None
         def printTree(self, layer = 0, orientation ="root"):
             u = layer+1
-            print(f"{layer}:  {self.data}")
+            print(f"{orientation} => {layer}:  {self.data}")
             if self.left:
                 self.left.printTree(u, orientation="left")
             
