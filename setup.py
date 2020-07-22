@@ -3,13 +3,13 @@ from distutils.core import setup
 setup(
   name = 'pydatastructures',         
   packages = ['pydatastructures'],   # Chose the same as "name"
-  version = '0.2.2',      
+  version = '0.2.3',      
   license='MIT',       
   description = 'This is a python library to implement data structures and algorithms',
   author = 'Juan Pablo Montoya',                   
   author_email = 'A01251887@itesm.mx',      
   url = 'https://github.com/JuanPabloMontoya271/pydatastructures.git',   
-  download_url = "https://github.com/JuanPabloMontoya271/pydatastructures/archive/v_02.2.tar.gz",
+  download_url = "https://github.com/JuanPabloMontoya271/pydatastructures/archive/v_02.3.tar.gz",
 
   keywords = ['python', 'data structures'],
   install_requires=[            # I get to this in a second
